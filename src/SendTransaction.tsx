@@ -25,13 +25,14 @@ function SendTransaction() {
         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <button
-        onClick={() =>
+        onClick={() => {
+          if (!address.startsWith('0x')) return;
           sendTransaction({
-            to: address,
+            to: address as `0x${string}`,
             value: parseEther(value),
           })
-        }
-        className="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-transform transform hover:scale-105 active:scale-95 shadow"
+        }}
+        className="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
       >
         Send transaction
       </button>
