@@ -2,7 +2,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import './App.css'
 import { http, createConfig, WagmiProvider } from 'wagmi'
-import { base, mainnet, optimism } from 'wagmi/chains'
+import { base, mainnet } from 'wagmi/chains'
 import { injected } from 'wagmi/connectors'
 import { WalletOptions } from './WalletOptions'
 import { Profile } from './Profile'
